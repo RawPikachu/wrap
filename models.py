@@ -1,5 +1,17 @@
 import random
 
+TRANSLATION = {
+    "pepper": 0,
+    "eggplant": 1,
+    "turnips": 2,
+    "pumpkin": 3,
+    "potato": 4,
+    "tomato": 5,
+    "pea": 6,
+    "onion": 7,
+    "lettuce": 8,
+}
+
 
 class User:
     def __init__(self, name: str, choices: list):
@@ -20,5 +32,6 @@ class User:
         self.stats.append(random.randint(100, 600))
         self.stats.append(random.randint(30, 300))
 
-        for stat in self.stats:
-            pass
+        # Give random modification to stats based on choices
+        for choice in self.choices:
+            self.stats[TRANSLATION[choice] + 1] = int(self.stats[TRANSLATION[choice] + 1] * random.uniform(1.0, 10.0))

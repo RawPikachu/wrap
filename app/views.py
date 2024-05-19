@@ -74,7 +74,6 @@ def add_user():
     if request.method == "POST":
         choices = []
 
-        print(request.form)
         if "username" not in request.form:
             return render_template("add_user.html", error="Name cannot be empty")
 
