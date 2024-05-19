@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .grid-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            margin-top: auto;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit_form.php" method="post">
+        <h1>Enter Username:</h1>
+        <input type="text" id="username" name="username" placeholder="Type username">
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="assets/pepper.jpg" alt="Pepper">
+                <input id="pepper" name="pepper" type="checkbox">
+            </div>
+            <div class="grid-item">
+                <img src="assets/eggplant.jpg" alt="Eggplant">
+                <input id="eggplant" name="eggplant" type="checkbox">
+            </div>
+            <div class="grid-item">
+                <img src="assets/turnips.jpg" alt="Turnips">
+                <input id="turnip" name="turnip" type="checkbox">
+            </div>
+            <div class="grid-item">
+                <img src="assets/pumpkin.jpg" alt="Pumpkin">
+                <input id="pumpkin" name="pumpkin" type="checkbox">
+            </div>
+            <div class="grid-item">
+                <img src="assets/potato.jpg" alt="Potato">
+                <input id="potato" name="potato" type="checkbox">
+            </div>
+            <div class="grid-item">
+                <img src="assets/tomato.webp" alt="Tomato">
+                <input id="tomato" name="tomato" type="checkbox">
+            </div>
+            <div class="grid-item">
+                <img src="assets/pea.jpg" alt="Pea">
+                <input id="pea" name="pea" type="checkbox">
+            </div>
+            <div class="grid-item">
+                <img src="assets/onion.jpg" alt="Onion">
+                <input id="onion" name="onion" type="checkbox">
+            </div>
+            <div class="grid-item">
+                <img src="assets/lettuce.jpg" alt="Lettuce">
+                <input id="lettuce" name="lettuce" type="checkbox">
+            </div>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
