@@ -63,37 +63,19 @@
 <body>
     <div class="container">
         <div class="image-container">
+            {% if users| length == 0 %}
+            <p>There are no users :< Add one by clicking the button below</p>
+            {% else %}
+            {% for i in range(users| length) %}
             <div class="image-item">
-                <img src="assets/pepper.jpg" alt="Pepper">
+                <img src="data:image/png;base64,{{ images[i].decode() }}">
             </div>
-            <div class="image-item">
-                <img src="assets/eggplant.jpg" alt="Eggplant">
-            </div>
-            <div class="image-item">
-                <img src="assets/turnips.jpg" alt="Turnips">
-            </div>
-            <div class="image-item">
-                <img src="assets/pumpkin.jpg" alt="Pumpkin">
-            </div>
-            <div class="image-item">
-                <img src="assets/potato.jpg" alt="Potato">
-            </div>
-            <div class="image-item">
-                <img src="assets/tomato.webp" alt="Tomato">
-            </div>
-            <div class="image-item">
-                <img src="assets/pea.jpg" alt="Pea">
-            </div>
-            <div class="image-item">
-                <img src="assets/onion.jpg" alt="Onion">
-            </div>
-            <div class="image-item">
-                <img src="assets/lettuce.jpg" alt="Lettuce">
-            </div>
+            {% endfor %}
+            {% endif %}
         </div>
     </div>
     <div class="footer">
-        <a href="home.html">Home</a>
+        <a href="/add_user">Add User</a>
     </div>
 </body>
 </html>
