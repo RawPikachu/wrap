@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Scroll Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            height: calc(100vh - 60px); /* Adjust height to leave space for the fixed footer */
+            overflow-y: scroll;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 60px; /* Extra space for scroll */
+        }
+        .image-item {
+            text-align: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .image-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .footer a {
+            color: #28a745;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .footer a:hover {
+            color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <div class="image-item">
+                <img src="assets/pepper.jpg" alt="Pepper">
+            </div>
+            <div class="image-item">
+                <img src="assets/eggplant.jpg" alt="Eggplant">
+            </div>
+            <div class="image-item">
+                <img src="assets/turnips.jpg" alt="Turnips">
+            </div>
+            <div class="image-item">
+                <img src="assets/pumpkin.jpg" alt="Pumpkin">
+            </div>
+            <div class="image-item">
+                <img src="assets/potato.jpg" alt="Potato">
+            </div>
+            <div class="image-item">
+                <img src="assets/tomato.webp" alt="Tomato">
+            </div>
+            <div class="image-item">
+                <img src="assets/pea.jpg" alt="Pea">
+            </div>
+            <div class="image-item">
+                <img src="assets/onion.jpg" alt="Onion">
+            </div>
+            <div class="image-item">
+                <img src="assets/lettuce.jpg" alt="Lettuce">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="home.html">Home</a>
+    </div>
+</body>
+</html>
